@@ -8,11 +8,11 @@ namespace csharp_oop_shop_2
 {
     public class Prodotto
     {
-        private int codice;
-        private string nome;
-        private string descrizione;
-        private double prezzo;
-        private double iva;
+        protected int codice;
+        protected string nome;
+        protected string descrizione;
+        protected double prezzo;
+        protected double iva;
 
 
         //Costruttori di default
@@ -81,13 +81,13 @@ namespace csharp_oop_shop_2
 
         //Metodi
 
-        private int CalcolaCodice()
+        protected int CalcolaCodice()
         {
             Random r = new Random();
             return r.Next(0, 9999999);
         }
 
-        private double CalcoloIva(double price)
+        protected double CalcoloIva(double price)
         {
             return (price * 22) / 100;
         }

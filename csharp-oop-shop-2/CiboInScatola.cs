@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace csharp_oop_shop_2
 {
-    public class SacchettoDiFrutta : Prodotto
+    public class CiboInScatola : Prodotto
     {
         // PROPRIETA / ATTRIBUTI
-        double maxPezzi;
-        double nPezzi;
+        private double nGrammi;
+        private double maxGrammi;
 
         // STATO
 
 
         // COSTRUTTORI
-        SacchettoDiFrutta(string name, string description, double price, double nPezzi) : base( name, description, price) 
+        CiboInScatola(string name, string description, double price, double nGrammi) : base(name, description, price)
         {
-            this.nPezzi = nPezzi;
-            this.maxPezzi = 5;
+            this.nGrammi= nGrammi;
+            this.maxGrammi = 300;
         }
-        
+
         // GETTERS
-        
-        
+
+
         // SETTERS
-        
-        
+
+
         // METODI PUBBLICI
-        
-        
+
+
         // METODI PRIVATI
     }
 }
