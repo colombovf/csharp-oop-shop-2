@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace csharp_oop_shop_2
 {
     public class Prodotto
     {
-        protected int codice;
-        protected string nome;
-        protected string descrizione;
-        protected double prezzo;
-        protected double iva;
+        private int codice;
+        private string nome;
+        private string descrizione;
+        private double prezzo;
+        private double iva;
 
 
         //Costruttori di default
@@ -81,15 +82,25 @@ namespace csharp_oop_shop_2
 
         //Metodi
 
-        protected int CalcolaCodice()
+        private int CalcolaCodice()
         {
             Random r = new Random();
             return r.Next(0, 9999999);
         }
 
-        protected double CalcoloIva(double price)
+        private double CalcoloIva(double price)
         {
             return (price * 22) / 100;
         }
+
+        public void Stampa()
+        {
+            Console.WriteLine(codice + " " + nome);
+            Console.WriteLine("Descrizione: " + descrizione);
+            Console.WriteLine("Prezzo: " + prezzo);
+            Console.WriteLine("Prezzo senza IVA: " + (prezzo - iva));
+        }
+
+
     }
 }
